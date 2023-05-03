@@ -49,7 +49,7 @@
         .map(({name, download_url}, idx) => [
         idx+1,
         {
-          name: name.replaceAll('_', ' '),
+          name: name.replaceAll('_', ' ').split('.').slice(0, -1).join('.'),
           download_url,
         }
       ])
